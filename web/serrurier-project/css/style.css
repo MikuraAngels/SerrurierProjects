@@ -1,0 +1,106 @@
+/* Created by Solene ERNOUL */
+
+@import 'https://fonts.googleapis.com/css?family=Comfortaa';
+
+html, body {margin: 0; width: 100%; height: 100%; font-family: 'Comfortaa', cursive;}
+body {background-color: #F5F5F5; font: 18px/1.5;}
+header, footer {background-color: #0f9983; color: #fff}
+a {text-decoration: none; color: #fff}
+footer {
+    min-height: 150px;
+}
+
+h1 {
+    margin: auto;
+    color: #fff;
+    font-weight: normal;
+}
+nav {
+    min-height: 40px;
+    line-height: 40px;
+}
+nav > ul {
+    float: right;
+    margin: 0;
+}
+
+nav > h1, nav > ul, nav > ul > li {display: inline-block}
+nav > ul > li {margin-left: -5px; padding: 1.5px 12px;}
+nav > ul > li:hover {background-color: #33a996;}
+
+#wrapper {
+    background: #FFF;
+    margin: 0 auto;
+    min-height: 50%;
+}
+
+#wrapper section:nth-child(odd) {
+    background-color: #dadfe1;
+}
+
+#wrapper section:nth-child(even) {
+    background-color: #eef3f5;
+}
+
+section {
+    min-height: 150px;
+    padding: 10px;
+}
+
+section#search-zone {
+    background-image: url('../images/bg_services.jpg');
+    height: 295px;
+    background-size: auto 340px;
+    background-position: 82px -21px ;
+}
+
+section#search-zone div#search-bar {
+    background-color: #FFF;
+    border: 2px solid #FFF;
+    border-radius: 6px;
+    box-shadow: 0px 0px 14px rgba(0,0,0,0.1);
+    margin: 0 auto;
+    max-width: 500px;
+    margin-top: 50px;
+}
+
+section#search-zone div#search-bar input {
+    outline: none;
+    border: 0px;
+    width: 100%;
+    height: 54px;
+    padding-left: 14px;
+    background-color: transparent;
+    font-size: 14px;
+    color: #435f71;
+}
+section#search-zone div#search-bar .input-case,
+section#search-zone div#search-bar .button-case {
+    display: inline-block;
+    vertical-align: top;
+}
+
+section#search-zone div#search-bar .input-case {
+    width: 74%;
+}
+
+section#search-zone div#search-bar .button-case {
+    width: 25%;
+}
+section#search-zone div#search-bar input[type="submit"] {
+    display: block;
+    border: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 56px;
+    background-color: #ff7e00;
+    color: #FFF;
+    font-size: 18px;
+    text-align: center;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+#container {
+
+}
+
