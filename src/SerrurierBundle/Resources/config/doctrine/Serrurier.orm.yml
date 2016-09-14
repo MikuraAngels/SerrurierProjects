@@ -1,0 +1,15 @@
+SerrurierBundle\Entity\Serrurier:
+    type: entity
+    table: null
+    repositoryClass: SerrurierBundle\Repository\SerrurierRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nom:
+            type: string
+            length: '40'
+    lifecycleCallbacks: {  }

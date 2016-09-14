@@ -1,3 +1,11 @@
+serrurier:
+    resource: "@SerrurierBundle/Resources/config/routing.yml"
+    prefix:   /
+
+page:
+    resource: "@PageBundle/Resources/config/routing.yml"
+    prefix:   /page
+
 homepage:
   path: /
   defaults:

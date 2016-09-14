@@ -1,0 +1,3 @@
+serrurier_homepage:
+    path:     /
+    defaults: { _controller: SerrurierBundle:Default:index }

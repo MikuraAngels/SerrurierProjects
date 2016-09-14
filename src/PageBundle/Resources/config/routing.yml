@@ -1,0 +1,7 @@
+page_homepage:
+    path:     /
+    defaults: { _controller: PageBundle:Default:index }
+
+page_cgu:
+  path: /cgu
+  defaults: { _controller: PageBundle:Page:show }
