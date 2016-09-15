@@ -12,4 +12,22 @@ SerrurierBundle\Entity\Serrurier:
         nom:
             type: string
             length: '40'
+        prenom:
+            type: string
+            length: '40'
+        societe:
+            type: string
+            length: '80'
+        telephone:
+            type: integer
+            length: '10'
+        adresse:
+            type: string
+            length: '250'
+        ville:
+            type: string
+            length: '40'
+        codePostal:
+             type: string
+             length: '5'
     lifecycleCallbacks: {  }

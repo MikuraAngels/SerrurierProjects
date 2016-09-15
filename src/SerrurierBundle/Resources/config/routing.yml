@@ -1,3 +1,7 @@
+serrurier_serrurier:
+    resource: "@SerrurierBundle/Resources/config/routing/serrurier.yml"
+    prefix:   /serrurier
+
 serrurier_homepage:
     path:     /
     defaults: { _controller: SerrurierBundle:Default:index }

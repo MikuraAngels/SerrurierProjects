@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Serrurier list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for serrurier in serruriers %}
+            <tr>
+                <td><a href="{{ path('serrurier_show', { 'id': serrurier.id }) }}">{{ serrurier.id }}</a></td>
+                <td>{{ serrurier.nom }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('serrurier_show', { 'id': serrurier.id }) }}">show</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    
+{% endblock %}

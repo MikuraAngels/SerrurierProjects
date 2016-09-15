@@ -1,0 +1,12 @@
+serrurier_index:
+    path:     /
+    defaults: { _controller: "SerrurierBundle:Serrurier:index" }
+    methods:  GET
+
+serrurier_show:
+    path:     /{id}/show
+    defaults: { _controller: "SerrurierBundle:Serrurier:show" }
+    methods:  GET
+
+
+
