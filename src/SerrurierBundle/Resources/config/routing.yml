@@ -1,6 +1,6 @@
 serrurier_serrurier:
     resource: "@SerrurierBundle/Resources/config/routing/serrurier.yml"
-    prefix:   /serrurier
+    prefix:   /
 
 serrurier_homepage:
     path:     /

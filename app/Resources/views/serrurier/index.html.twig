@@ -8,6 +8,14 @@
             <tr>
                 <th>Id</th>
                 <th>Nom</th>
+                <th>Prenom</th>
+                <th>Societe</th>
+                <th>Telephone</th>
+                <th>Adresse</th>
+                <th>Ville</th>
+                <th>Codepostal</th>
+                <th>Email</th>
+                <th>Password</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -16,10 +24,21 @@
             <tr>
                 <td><a href="{{ path('serrurier_show', { 'id': serrurier.id }) }}">{{ serrurier.id }}</a></td>
                 <td>{{ serrurier.nom }}</td>
+                <td>{{ serrurier.prenom }}</td>
+                <td>{{ serrurier.societe }}</td>
+                <td>{{ serrurier.telephone }}</td>
+                <td>{{ serrurier.adresse }}</td>
+                <td>{{ serrurier.ville }}</td>
+                <td>{{ serrurier.codePostal }}</td>
+                <td>{{ serrurier.email }}</td>
+                <td>{{ serrurier.password }}</td>
                 <td>
                     <ul>
                         <li>
                             <a href="{{ path('serrurier_show', { 'id': serrurier.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('serrurier_edit', { 'id': serrurier.id }) }}">edit</a>
                         </li>
                     </ul>
                 </td>
@@ -28,5 +47,9 @@
         </tbody>
     </table>
 
-    
+    <ul>
+        <li>
+            <a href="{{ path('serrurier_new') }}">Create a new entry</a>
+        </li>
+    </ul>
 {% endblock %}

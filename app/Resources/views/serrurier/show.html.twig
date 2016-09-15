@@ -13,12 +13,52 @@
                 <th>Nom</th>
                 <td>{{ serrurier.nom }}</td>
             </tr>
+            <tr>
+                <th>Prenom</th>
+                <td>{{ serrurier.prenom }}</td>
+            </tr>
+            <tr>
+                <th>Societe</th>
+                <td>{{ serrurier.societe }}</td>
+            </tr>
+            <tr>
+                <th>Telephone</th>
+                <td>{{ serrurier.telephone }}</td>
+            </tr>
+            <tr>
+                <th>Adresse</th>
+                <td>{{ serrurier.adresse }}</td>
+            </tr>
+            <tr>
+                <th>Ville</th>
+                <td>{{ serrurier.ville }}</td>
+            </tr>
+            <tr>
+                <th>Codepostal</th>
+                <td>{{ serrurier.codePostal }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ serrurier.email }}</td>
+            </tr>
+            <tr>
+                <th>Password</th>
+                <td>{{ serrurier.password }}</td>
+            </tr>
         </tbody>
     </table>
 
     <ul>
         <li>
             <a href="{{ path('serrurier_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('serrurier_edit', { 'id': serrurier.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
         </li>
     </ul>
 {% endblock %}

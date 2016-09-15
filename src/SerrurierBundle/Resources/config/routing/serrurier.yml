@@ -4,9 +4,21 @@ serrurier_index:
     methods:  GET
 
 serrurier_show:
-    path:     /{id}/show
+    path:     /profil/{id}
     defaults: { _controller: "SerrurierBundle:Serrurier:show" }
     methods:  GET
 
+serrurier_new:
+    path:     /inscription
+    defaults: { _controller: "SerrurierBundle:Serrurier:new" }
+    methods:  [GET, POST]
 
+serrurier_edit:
+    path:     /edit/{id}
+    defaults: { _controller: "SerrurierBundle:Serrurier:edit" }
+    methods:  [GET, POST]
 
+serrurier_delete:
+    path:     /delete/{id}
+    defaults: { _contror: "SerrurierBundle:Serrurier:delete" }
+    methods:  DELETE

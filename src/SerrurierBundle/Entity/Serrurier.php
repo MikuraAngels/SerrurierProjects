@@ -27,7 +27,7 @@ class Serrurier
      */
     private $societe;
     /**
-     * @var int
+     * @var string
      */
     private $telephone;
     /**
@@ -38,14 +38,56 @@ class Serrurier
      * @var string
      */
     private $ville;
-        /**
-         * @var string
-         */
+    /**
+     * @var string
+     */
     private $codePostal;
+    /**
+     * @var string
+     */
+    private $email;
+    /**
+     * @var string
+     */
+    private $password;
 
     /**
      * @return string
      */
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    /**
+     * @param string $email
+     */
+    public function setEmail($email)
+    {
+        $this->email = $email;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPassword()
+    {
+        return $this->password;
+    }
+
+    /**
+     * @param string $password
+     */
+    public function setPassword($password)
+    {
+        $this->password = $password;
+    }
+
+
+    /**
+     * @return string
+     */
+
     public function getPrenom()
     {
         return $this->prenom;
@@ -76,7 +118,7 @@ class Serrurier
     }
 
     /**
-     * @return int
+     * @return string
      */
     public function getTelephone()
     {
@@ -84,7 +126,7 @@ class Serrurier
     }
 
     /**
-     * @param int $telephone
+     * @param string $telephone
      */
     public function setTelephone($telephone)
     {

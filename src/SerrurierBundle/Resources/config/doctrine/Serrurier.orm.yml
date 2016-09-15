@@ -19,7 +19,7 @@ SerrurierBundle\Entity\Serrurier:
             type: string
             length: '80'
         telephone:
-            type: integer
+            type: string
             length: '10'
         adresse:
             type: string
@@ -30,4 +30,10 @@ SerrurierBundle\Entity\Serrurier:
         codePostal:
              type: string
              length: '5'
+        email:
+            type: string
+            length: '80'
+        password:
+             type: string
+             length: '250'
     lifecycleCallbacks: {  }
