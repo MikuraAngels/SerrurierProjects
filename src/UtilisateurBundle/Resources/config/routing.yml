@@ -1,0 +1,11 @@
+liste_utilisateur:
+    resource: "@UtilisateurBundle/Resources/config/routing/utilisateur.yml"
+    prefix:   /user
+
+utilisateur_homepage:
+    path:     /profil
+    defaults: { _controller: UtilisateurBundle:Default:index }
+
+utilisateur_login:
+    path:     /login
+    defaults: { _controller: UtilisateurBundle:Utilisateur:login }

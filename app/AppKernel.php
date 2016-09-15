@@ -18,6 +18,7 @@ class AppKernel extends Kernel
             new AppBundle\AppBundle(),
             new PageBundle\PageBundle(),
             new SerrurierBundle\SerrurierBundle(),
+            new UtilisateurBundle\UtilisateurBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {

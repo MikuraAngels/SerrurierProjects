@@ -4,12 +4,13 @@
 
 html, body {margin: 0; width: 100%; height: 100%; font-family: 'Comfortaa', cursive;}
 body {background-color: #F5F5F5; font: 18px/1.5;}
-header, footer {background-color: #0f9983; color: #fff}
+header, footer {background-color: #0f9983; color: #fff; width: 100%;}
 a {text-decoration: none; color: #fff}
 footer {
     min-height: 150px;
     padding: 12px;
-    position: relative;
+    position: fixed;
+    bottom: 0;
 }
 footer ul > li {width: 33%}
 footer > div {

@@ -1,0 +1,36 @@
+UtilisateurBundle\Entity\Utilisateur:
+    type: entity
+    table: null
+    repositoryClass: UtilisateurBundle\Repository\UtilisateurRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nom:
+            type: string
+            length: '40'
+        prenom:
+            type: string
+            length: '40'
+        telephone:
+            type: integer
+        adresse:
+            type: string
+            length: '255'
+        ville:
+            type: string
+            length: '40'
+        codePostal:
+            type: string
+            length: '5'
+        email:
+            type: string
+            length: '255'
+            unique: true
+        password:
+            type: string
+            length: '40'
+    lifecycleCallbacks: {  }

@@ -1,3 +1,7 @@
+utilisateur:
+    resource: "@UtilisateurBundle/Resources/config/routing.yml"
+    prefix:   /
+
 serrurier:
     resource: "@SerrurierBundle/Resources/config/routing.yml"
     prefix:   /serrurier
