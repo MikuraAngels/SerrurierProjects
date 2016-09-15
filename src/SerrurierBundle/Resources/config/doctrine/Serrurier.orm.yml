@@ -21,19 +21,19 @@ SerrurierBundle\Entity\Serrurier:
         telephone:
             type: string
             length: '10'
-        adresse:
-            type: string
-            length: '250'
-        ville:
-            type: string
-            length: '40'
-        codePostal:
-             type: string
-             length: '5'
         email:
             type: string
             length: '80'
         password:
              type: string
              length: '250'
+
+    oneToOne:
+        planning:
+            targetEntity: SerrurierBundle\Entity\Planning
+
+    oneToMany:
+        adresse:
+            targetEntity: SerrurierBundle\Entity\Adresse
+            mappedBy: SerrurierBundle\Entity\Serrurier
     lifecycleCallbacks: {  }

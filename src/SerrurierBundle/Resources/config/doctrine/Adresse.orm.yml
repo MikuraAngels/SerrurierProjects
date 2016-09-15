@@ -1,0 +1,24 @@
+SerrurierBundle\Entity\Adresse:
+    type: entity
+    table: null
+    repositoryClass: SerrurierBundle\Repository\AdresseRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        adresse:
+            type: string
+            length: '255'
+        codePostal:
+            type: string
+            length: '5'
+        ville:
+            type: string
+            length: '80'
+        pays:
+            type: string
+            length: '80'
+    lifecycleCallbacks: {  }

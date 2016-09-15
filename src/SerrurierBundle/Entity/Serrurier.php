@@ -33,18 +33,6 @@ class Serrurier
     /**
      * @var string
      */
-    private $adresse;
-    /**
-     * @var string
-     */
-    private $ville;
-    /**
-     * @var string
-     */
-    private $codePostal;
-    /**
-     * @var string
-     */
     private $email;
     /**
      * @var string
@@ -52,9 +40,13 @@ class Serrurier
     private $password;
 
     /**
-     * @ORM\OneToOne(targetEntity="OC\SerrurierBundle\Entity\Planning", cascade={"persist"})
+     * @todo définir les relations entre serruriers/plannings
      */
     private $planning;
+    /**
+     * @todo définir les relations entre serruriers/adresses
+     */
+    private $adresse;
 
     /**
      * @return mixed
@@ -155,51 +147,21 @@ class Serrurier
     }
 
     /**
-     * @return string
+     * @return Adresse
      */
     public function getAdresse()
     {
         return $this->adresse;
     }
     /**
-     * @param string $adresse
+     * @param Adresse $adresse
      */
     public function setAdresse($adresse)
     {
         $this->adresse = $adresse;
     }
 
-    /**
-     * @return string
-     */
-    public function getVille()
-    {
-        return $this->ville;
-    }
 
-    /**
-     * @param string $ville
-     */
-    public function setVille($ville)
-    {
-        $this->ville = $ville;
-    }
-
-    /**
-     * @return string
-     */
-    public function getCodePostal()
-    {
-        return $this->codePostal;
-    }
-
-    /**
-     * @param string $codePostal
-     */
-    public function setCodePostal($codePostal)
-    {
-        $this->codePostal = $codePostal;
-    }
     /**
      * Get id
      *

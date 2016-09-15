@@ -68,6 +68,23 @@ class SerrurierController extends Controller
     }
 
     /**
+     * Affiche les serruriers par ville
+     * @param $city
+     * @return array
+     */
+    public function showByCityAction($city)
+    {
+        $serrurier = $this->getDoctrine()->getRepository('SerrurierBundle:Serrurier')->findOneBy($city);
+
+        if (!$serrurier) {
+            throw $this->createNotFoundException("Pas de Serrurier");
+        }
+
+        return array('serrurier' => $serrurier);
+    }
+
+
+    /**
      * Displays a form to edit an existing Serrurier entity.
      *
      */
