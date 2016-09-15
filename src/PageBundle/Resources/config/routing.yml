@@ -3,5 +3,13 @@ page_homepage:
     defaults: { _controller: PageBundle:Default:index }
 
 page_cgu:
-  path: /cgu
-  defaults: { _controller: PageBundle:Page:show }
+  path: /conditions-utilisations
+  defaults: { _controller: PageBundle:Page:cgu }
+
+page_ml:
+  path: /mentions-legales
+  defaults: { _controller: PageBundle:Page:ml }
+
+page_faq:
+  path: /faq
+  defaults: { _controller: PageBundle:Page:faq }

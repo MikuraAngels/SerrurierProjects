@@ -1,1 +1,24 @@
-Hello World!
+{% extends 'base.html.twig' %}
+{% block title %} Serrurier Symfony {% endblock %}
+{% block body %}
+    <!-- Created by Solene ERNOUL -->
+    <div id="wrapper">
+        <section id="search-zone">
+            <div id="search-bar">
+                <div class="input-case">
+                    <input type="text" placeholder="Où cherchez-vous ? (adresse, ville...)"/>
+                </div>
+                <div class="button-case">
+                    <input type="submit" value="Rechercher"/>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>Serrurier Symfony, c'est quoi ?</h2>
+            <p>Vous pourrez trouver ici un serrurier proche de chez vous, pour prendre rendez-vous !</p>
+
+        </section>
+        <section>2</section>
+
+    </div>
+{% endblock %}

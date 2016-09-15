@@ -8,6 +8,14 @@ header, footer {background-color: #0f9983; color: #fff}
 a {text-decoration: none; color: #fff}
 footer {
     min-height: 150px;
+    padding: 12px;
+    position: relative;
+}
+footer ul > li {width: 33%}
+footer > div {
+    position: absolute;
+    bottom: 0;
+    padding: 8px 33px;
 }
 
 h1 {
@@ -24,12 +32,12 @@ nav > ul {
     margin: 0;
 }
 
-nav > h1, nav > ul, nav > ul > li {display: inline-block}
+nav > h1, nav > ul, ul > li {display: inline-block}
 nav > ul > li {margin-left: -5px; padding: 1.5px 12px;}
 nav > ul > li:hover {background-color: #33a996;}
 
 #wrapper {
-    background: #FFF;
+    background: #faf1e2;
     margin: 0 auto;
     min-height: 50%;
 }
@@ -47,11 +55,14 @@ section {
     padding: 10px;
 }
 
-section#search-zone {
+section#search-zone, section#error404 {
     background-image: url('../images/bg_services.jpg');
     height: 295px;
     background-size: auto 340px;
     background-position: 82px -21px ;
+}
+section#error404 {
+    text-align: center;
 }
 
 section#search-zone div#search-bar {
@@ -101,6 +112,21 @@ section#search-zone div#search-bar input[type="submit"] {
     border-bottom-right-radius: 5px;
 }
 #container {
-
+    width: 80%;
+    margin: 0 auto;
+    padding: 15px;
+    color: #033c33;
 }
 
+#container h1 {
+    color: #ff9b00;
+}
+
+#container h2 {
+    color: #e6bc1e;
+    font-weight: 500;
+}
+
+#container a {
+    color: #0e9e87;
+}
