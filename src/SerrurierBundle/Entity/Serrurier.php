@@ -52,6 +52,27 @@ class Serrurier
     private $password;
 
     /**
+     * @ORM\OneToOne(targetEntity="OC\SerrurierBundle\Entity\Planning", cascade={"persist"})
+     */
+    private $planning;
+
+    /**
+     * @return mixed
+     */
+    public function getPlanning()
+    {
+        return $this->planning;
+    }
+
+    /**
+     * @param mixed $planning
+     */
+    public function setPlanning($planning)
+    {
+        $this->planning = $planning;
+    }
+    
+    /**
      * @return string
      */
     public function getEmail()

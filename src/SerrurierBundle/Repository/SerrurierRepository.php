@@ -12,4 +12,15 @@ use Doctrine\ORM\EntityRepository;
  */
 class SerrurierRepository extends EntityRepository
 {
+    /*public function showByCityAction($city)
+    {
+        $serrurier = $this->getDoctrine()->getRepository('SerrurierBundle:Serrurier')->findOneBy($city);
+
+        if (!$serrurier) {
+            throw $this->createNotFoundException("Pas de Serrurier");
+        }
+
+        return array('serrurier' => $serrurier);
+    }*/
+
 }
