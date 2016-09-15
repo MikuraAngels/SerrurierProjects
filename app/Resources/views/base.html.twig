@@ -5,6 +5,9 @@
         <meta charset="UTF-8" />
         <title>{% block title %}Serrurier Symfony!{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
+        {% stylesheets '@bootstrap_css' filter='cssrewrite' output='css/we_are_creex/bootstrap.css' %}
+        <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}"/>
+        {% endstylesheets %}
         <link rel="icon" type="image/x-icon" href="{{ asset('serrurier-project/images/favicon-serrurier-project.ico') }}" />
         <link rel="stylesheet" type="text/css" href="{{ asset('serrurier-project/css/style.css') }}">
     </head>
@@ -12,6 +15,9 @@
         {% include 'header.html.twig' %}
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
+        {% javascripts '@jquery' '@bootstrap_js' output='js/forever_creex/dependencies.js'%}
+        <script type="text/javascript" src="{{ asset_url }}"></script>
+        {% endjavascripts %}
         {% include 'footer.html.twig' %}
     </body>
 </html>

@@ -19,6 +19,7 @@ class AppKernel extends Kernel
             new PageBundle\PageBundle(),
             new SerrurierBundle\SerrurierBundle(),
             new UtilisateurBundle\UtilisateurBundle(),
+            new Symfony\Bundle\AsseticBundle\AsseticBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {
