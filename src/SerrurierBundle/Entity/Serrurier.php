@@ -98,7 +98,6 @@ class Serrurier
     {
         return $this->adresse;
     }
-
     /**
      * @param string $adresse
      */
