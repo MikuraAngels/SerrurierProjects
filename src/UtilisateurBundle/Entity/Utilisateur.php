@@ -3,6 +3,7 @@
 namespace UtilisateurBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use SerrurierBundle\Entity\Intervention;
 
 /**
  * Utilisateur
@@ -54,7 +55,27 @@ class Utilisateur
      */
     private $password;
 
+    /**
+     * @var ArrayCollection
+     */
+    private $listeIntervention;
 
+    /**
+     * @return ArrayCollection
+     */
+    public function getListeIntervention()
+    {
+        return $this->listeIntervention;
+    }
+
+    /**
+     * @param ArrayCollection $listeIntervention
+     */
+    public function setListeIntervention($listeIntervention)
+    {
+        $this->listeIntervention = $listeIntervention;
+    }
+    
     /**
      * Get id
      *

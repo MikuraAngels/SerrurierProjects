@@ -13,4 +13,5 @@ SerrurierBundle\Entity\Planning:
             type: datetime
         finIntervention:
             type: datetime
+
     lifecycleCallbacks: {  }

@@ -40,30 +40,34 @@ class Serrurier
     private $password;
 
     /**
-     * @todo définir les relations entre serruriers/plannings
-     */
-    private $planning;
-    /**
-     * @todo définir les relations entre serruriers/adresses
+     * @var Adresse
      */
     private $adresse;
 
+
     /**
-     * @return mixed
+     * @var ArrayCollection
      */
-    public function getPlanning()
+    private $listeIntervention;
+
+    /**
+     * @return ArrayCollection
+     */
+    public function getListeIntervention()
     {
-        return $this->planning;
+        return $this->listeIntervention;
     }
 
     /**
-     * @param mixed $planning
+     * @param ArrayCollection $listeIntervention
      */
-    public function setPlanning($planning)
+    public function setListeIntervention($listeIntervention)
     {
-        $this->planning = $planning;
+        $this->listeIntervention = $listeIntervention;
     }
+
     
+
     /**
      * @return string
      */

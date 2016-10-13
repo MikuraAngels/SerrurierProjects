@@ -1,0 +1,27 @@
+SerrurierBundle\Entity\Intervention:
+    type: entity
+    table: null
+    repositoryClass: SerrurierBundle\Repository\InterventionRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        dateDebut:
+            type: datetime
+            column: date_debut
+        dateFin:
+            type: datetime
+            column: date_fin
+    manyToOne:
+        utilisateur:
+            targetEntity: UtilisateurBundle\Entity\Utilisateur
+            inversedBy: listeIntervention
+
+        serrurier:
+            targetEntity: SerrurierBundle\Entity\Serrurier
+            inversedBy: listeIntervention
+
+    lifecycleCallbacks: {  }
