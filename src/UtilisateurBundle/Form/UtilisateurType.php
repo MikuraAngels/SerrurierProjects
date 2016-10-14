@@ -21,8 +21,6 @@ class UtilisateurType extends AbstractType
             ->add('adresse')
             ->add('ville')
             ->add('codePostal')
-            ->add('email')
-            ->add('password')
         ;
     }
     
@@ -35,4 +33,11 @@ class UtilisateurType extends AbstractType
             'data_class' => 'UtilisateurBundle\Entity\Utilisateur'
         ));
     }
+
+    public function getParent()
+    {
+        return 'fos_user_registration';
+    }
+
+
 }
