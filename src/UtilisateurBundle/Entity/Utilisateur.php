@@ -3,16 +3,17 @@
 namespace UtilisateurBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use FOS\UserBundle\Entity\User;
 
 /**
  * Utilisateur
  */
-class Utilisateur
+class Utilisateur extends User
 {
     /**
      * @var int
      */
-    private $id;
+    protected $id;
 
     /**
      * @var string
@@ -43,16 +44,6 @@ class Utilisateur
      * @var string
      */
     private $codePostal;
-
-    /**
-     * @var string
-     */
-    private $email;
-
-    /**
-     * @var string
-     */
-    private $password;
 
 
     /**
@@ -201,51 +192,5 @@ class Utilisateur
     public function getCodePostal()
     {
         return $this->codePostal;
-    }
-
-    /**
-     * Set email
-     *
-     * @param string $email
-     * @return Utilisateur
-     */
-    public function setEmail($email)
-    {
-        $this->email = $email;
-
-        return $this;
-    }
-
-    /**
-     * Get email
-     *
-     * @return string 
-     */
-    public function getEmail()
-    {
-        return $this->email;
-    }
-
-    /**
-     * Set password
-     *
-     * @param string $password
-     * @return Utilisateur
-     */
-    public function setPassword($password)
-    {
-        $this->password = $password;
-
-        return $this;
-    }
-
-    /**
-     * Get password
-     *
-     * @return string 
-     */
-    public function getPassword()
-    {
-        return $this->password;
     }
 }

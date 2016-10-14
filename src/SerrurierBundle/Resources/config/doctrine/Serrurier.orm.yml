@@ -31,9 +31,10 @@ SerrurierBundle\Entity\Serrurier:
     oneToOne:
         planning:
             targetEntity: SerrurierBundle\Entity\Planning
+#
+#    oneToMany:
+#        adresse:
+#            targetEntity: SerrurierBundle\Entity\Adresse
+#            mappedBy: SerrurierBundle\Entity\Serrurier
 
-    oneToMany:
-        adresse:
-            targetEntity: SerrurierBundle\Entity\Adresse
-            mappedBy: SerrurierBundle\Entity\Serrurier
     lifecycleCallbacks: {  }

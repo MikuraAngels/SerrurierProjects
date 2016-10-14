@@ -5,11 +5,13 @@
 html, body {margin: 0; width: 100%; height: 100%; font-family: 'Comfortaa', cursive;}
 body {background-color: #F5F5F5; font: 18px/1.5;}
 header, footer {background-color: #0f9983; color: #fff; width: 100%;}
-a {text-decoration: none; color: #fff}
+
+a {text-decoration: none; color: #FFF;}
+a:hover {text-decoration: none; color: #FFF;}
 footer {
     min-height: 150px;
     padding: 12px;
-    position: fixed;
+    position: relative;
     bottom: 0;
 }
 footer ul > li {width: 33%}
@@ -33,8 +35,59 @@ nav > ul {
     margin: 0;
 }
 
-nav > h1, nav > ul, ul > li {display: inline-block}
-nav > ul > li {margin-left: -5px; padding: 1.5px 12px;}
+/* CONNEXION / MON COMPTE */
+
+header nav > ul > li#account {position: relative;}
+header nav > ul > li#account > #dropdown-account > ul {
+    display: none;
+    position: absolute;
+    z-index: 99999;
+    background: #fff;
+    font-size: 15px;
+    top: 45px;
+    right: 0;
+    padding: 10px 15px;
+    border: 1px solid #0f9983;
+}
+
+header nav > ul > li#account > #dropdown-account.active > ul {
+    display: block;
+}
+
+header nav > ul > li#account > #dropdown-account.active > ul > li > a {
+    color: #0e9e87 !important;
+}
+
+header nav > ul > li#account > #dropdown-account.active > u l > li > a:hover {
+    color: #009e9d !important;
+}
+
+header nav > ul > li#account > #dropdown-account > ul:before,
+header nav > ul > li#account > #dropdown-account > ul:after {
+    content: '';
+    position: absolute;
+    height: 0;
+    width: 0;
+    left: 65%;
+    margin-left: -10px;
+    border-style: solid outset;
+    border-width: 0 12px 12px 12px;
+    background: none;
+}
+
+header nav > ul > li#account > #dropdown-account > ul:before {
+    top: -12px;
+    border-color:  transparent transparent #0e9e87 transparent;
+}
+
+header nav > ul > li#account > #dropdown-account > ul:after {
+    top: -11px;
+    border-color: transparent transparent #fff transparent;
+}
+
+nav > h1, nav > ul, ul > li {display: inline-block;}
+nav > ul > li {margin-left: -5px;}
+nav > ul > li > a {display: block; padding: 2.5px 12px;}
 nav > ul > li:hover {background-color: #33a996;}
 
 #wrapper {
@@ -129,5 +182,5 @@ section#search-zone div#search-bar input[type="submit"] {
 }
 
 #container a {
-    color: #0e9e87;
+    color: #0e9e87 !important;
 }

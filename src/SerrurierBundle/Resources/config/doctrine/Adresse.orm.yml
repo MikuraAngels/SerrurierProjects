@@ -21,4 +21,5 @@ SerrurierBundle\Entity\Adresse:
         pays:
             type: string
             length: '80'
+
     lifecycleCallbacks: {  }

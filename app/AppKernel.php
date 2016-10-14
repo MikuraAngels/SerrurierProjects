@@ -20,6 +20,7 @@ class AppKernel extends Kernel
             new SerrurierBundle\SerrurierBundle(),
             new UtilisateurBundle\UtilisateurBundle(),
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
+            new \FOS\UserBundle\FOSUserBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {

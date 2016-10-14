@@ -1,6 +1,6 @@
 <!-- Created by Solene ERNOUL -->
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
     <head>
         <meta charset="UTF-8" />
         <title>{% block title %}Serrurier Symfony!{% endblock %}</title>
@@ -14,7 +14,66 @@
     <body>
         {% include 'header.html.twig' %}
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        {% block javascripts %}
+            <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+            <script>
+
+                $dropdown = $('#dropdown-account');
+
+                $dropdown.on('click',function(){
+                    $(this).data('clicked', false);
+                    console.log('clicked1');
+                });
+
+                $('#account').on('click',function() {
+                    $(this).data('clicked', true);
+                    if (!$dropdown.hasClass('active')) {
+                        $('#dropdown-account').addClass('active');
+                        console.log('clicked2');
+                    }
+                    if (!$dropdown.hasClass('active')) {
+                        $('#dropdown-account').removeClass('active');
+                        console.log('clicked2');
+                    }
+                    else if (!$dropdown.data('clicked')) {
+                        console.log('clicked3');
+                    }
+                    else {
+                        $('#dropdown-account').removeClass('active');
+                        console.log('clicked4');
+                    }
+//                    console.log('userboxClicked');
+                });
+
+
+//                $('body').on('click',function(){
+////                    console.log('click body');
+//                    if ($dropdown.hasClass('active')) {
+//                        if (!$dropdown.data('clicked')) {
+//                            $dropdown.removeClass('active');
+//                            console.log('click out drop down');
+//                        }
+//                        console.log('Dropdown-account already active');
+//
+//                        if ($dropdown.data('clicked')) {
+//                            $('#dropdown-account').addClass('active');
+//                            console.log('clicked2');
+//                            $dropdown.data('clicked', false);
+//
+//                            $('#account').data('clicked', false);
+//                        }
+//                    }
+//
+//                    else if ($('#account').data('clicked')) {
+//                        $('#dropdown-account').addClass('active');
+//                        $('#button-userbox').data('clicked', false);
+//                        console.log('Dropdown-account active');
+//                    }
+//
+//                });
+                </script>
+
+        {% endblock %}
         {% javascripts '@jquery' '@bootstrap_js' output='js/forever_creex/dependencies.js'%}
         <script type="text/javascript" src="{{ asset_url }}"></script>
         {% endjavascripts %}
