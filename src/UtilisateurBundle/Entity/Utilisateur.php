@@ -48,6 +48,11 @@ class Utilisateur extends BaseUser
     private $codePostal;
 
     /**
+     * @var string
+     */
+//    private $imageProfil;
+
+    /**
      * @var ArrayCollection
      */
     private $listeIntervention;
@@ -215,4 +220,21 @@ class Utilisateur extends BaseUser
     {
         return $this->codePostal;
     }
+
+//    /**
+//     * @return string
+//     */
+//    public function getImageProfil()
+//    {
+//        return $this->imageProfil;
+//    }
+//
+//    /**
+//     * @param string $imageProfil
+//     */
+//    public function setImageProfil($imageProfil)
+//    {
+//        $this->imageProfil = $imageProfil;
+//    }
+
 }

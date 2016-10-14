@@ -1,0 +1,9 @@
+# Profile
+profile:
+    show:
+        nom: Nom
+        prenom: Prenom
+        telephone: Téléphone
+        adresse: Adresse
+        ville: Ville
+        code_postal: Code Postal

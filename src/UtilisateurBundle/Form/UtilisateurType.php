@@ -3,6 +3,7 @@
 namespace UtilisateurBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -21,6 +22,7 @@ class UtilisateurType extends AbstractType
             ->add('adresse')
             ->add('ville')
             ->add('codePostal')
+            //->add('imageProfil', FileType::class, array('label' => 'Image de profil'))
         ;
     }
     

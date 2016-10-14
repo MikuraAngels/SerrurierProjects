@@ -4,7 +4,6 @@ namespace UtilisateurBundle\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-
 use UtilisateurBundle\Entity\Utilisateur;
 use UtilisateurBundle\Form\UtilisateurType;
 
@@ -49,6 +48,19 @@ class UtilisateurController extends Controller
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+
+            /** @var Symfony\Component\HttpFoundation\File\UploadedFile $file */
+//            $file = $utilisateur->getImageProfil();
+//
+//            $fileName = md5(uniqid()).'.'.$file->guessExtension();
+//
+//            $file->move(
+//                $this->getParameter('image_directory'),
+//                $fileName
+//            );
+
+//            $utilisateur->setImageProfil('test');
+
             $em = $this->getDoctrine()->getManager();
             $em->persist($utilisateur);
             $em->flush();

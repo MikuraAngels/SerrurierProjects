@@ -1,0 +1,17 @@
+<div id="wrapper">
+    <div id="container">
+        <div class="fos_user_user_show">
+            <p>{{ 'profile.show.username'|trans({}, 'FOSUserBundle') }}: {{ user.username }}</p>
+            <p>{{ 'profile.show.nom'|trans({}, 'FOSUserBundle') }}: {{ user.nom }}</p>
+            <p>{{ 'profile.show.prenom'|trans({}, 'FOSUserBundle') }}: {{ user.prenom }}</p>
+            <p>{{ 'profile.show.telephone'|trans({}, 'FOSUserBundle') }}: {{ user.telephone }}</p>
+            <p>{{ 'profile.show.adresse'|trans({}, 'FOSUserBundle') }}: {{ user.adresse }}</p>
+            <p>{{ 'profile.show.ville'|trans({}, 'FOSUserBundle') }}: {{ user.ville }}</p>
+            <p>{{ 'profile.show.code_postal'|trans({}, 'FOSUserBundle') }}: {{ user.codepostal }}</p>
+            {#<p>{{ 'profile.show.code_postal'|trans({}, 'FOSUserBundle') }}: <img src="{{ asset('uploads/imageProfils/' ~ user.imageprofil) }}"/></p>#}
+            <p>{{ 'profile.show.email'|trans({}, 'FOSUserBundle') }}: {{ user.email }}</p>
+
+            <a href="{{ path('fos_user_profile_edit') }}">Edit</a>
+        </div>
+    </div>
+</div>
