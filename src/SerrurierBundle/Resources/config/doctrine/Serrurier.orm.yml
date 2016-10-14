@@ -33,9 +33,9 @@ SerrurierBundle\Entity\Serrurier:
             targetEntity: SerrurierBundle\Entity\Intervention
             mappedBy: serrurier
 
-#    manyToOne:
-#        adresse:
-#            targetEntity: SerrurierBundle\Entity\Adresse
-#            mappedBy: listeSerrurier
+    manyToOne:
+        adresse:
+            targetEntity: SerrurierBundle\Entity\Adresse
+            inversedBy: listeSerrurier
 
     lifecycleCallbacks: {  }

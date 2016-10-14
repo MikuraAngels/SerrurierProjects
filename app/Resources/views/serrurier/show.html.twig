@@ -1,22 +1,22 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Serrurier</h1>
-
-    <table>
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ serrurier.id }}</td>
-            </tr>
-            <tr>
-                <th>Nom</th>
-                <td>{{ serrurier.nom }}</td>
-            </tr>
-            <tr>
-                <th>Prenom</th>
-                <td>{{ serrurier.prenom }}</td>
-            </tr>
+    <h1>{{ serrurier.nom }} {{ serrurier.prenom }}</h1>
+    <div class="panel">
+        <table class="table-responsive">
+            <tbody>
+            {#<tr>#}
+            {#<th>Id</th>#}
+            {#<td>{{ serrurier.id }}</td>#}
+            {#</tr>#}
+            {#<tr>#}
+            {#<th>Nom</th>#}
+            {#<td>{{ serrurier.nom }}</td>#}
+            {#</tr>#}
+            {#<tr>#}
+            {#<th>Prenom</th>#}
+            {#<td>{{ serrurier.prenom }}</td>#}
+            {#</tr>#}
             <tr>
                 <th>Societe</th>
                 <td>{{ serrurier.societe }}</td>
@@ -27,38 +27,26 @@
             </tr>
             <tr>
                 <th>Adresse</th>
-                <td>{{ serrurier.adresse }}</td>
-            </tr>
-            <tr>
-                <th>Ville</th>
-                <td>{{ serrurier.ville }}</td>
-            </tr>
-            <tr>
-                <th>Codepostal</th>
-                <td>{{ serrurier.codePostal }}</td>
+                {#<td>{{ serrurier.adresse }}</td>#}
             </tr>
             <tr>
                 <th>Email</th>
                 <td>{{ serrurier.email }}</td>
             </tr>
-            <tr>
-                <th>Password</th>
-                <td>{{ serrurier.password }}</td>
-            </tr>
-        </tbody>
-    </table>
+            {#<tr>#}
+            {#<th>Password</th>#}
+            {#<td>{{ serrurier.password }}</td>#}
+            {#</tr>#}
+            </tbody>
+        </table>
+    </div>
+    <a class="btn" href="#">Demander une intervention</a>
+    <a class="btn" href="{{ path('serrurier_index') }}">Revenir à la liste</a>
 
-    <ul>
-        <li>
-            <a href="{{ path('serrurier_index') }}">Back to the list</a>
-        </li>
-        <li>
-            <a href="{{ path('serrurier_edit', { 'id': serrurier.id }) }}">Edit</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
-            {{ form_end(delete_form) }}
-        </li>
-    </ul>
+
+    {#<a href="{{ path('serrurier_edit', { 'id': serrurier.id }) }}">Edit</a>#}
+
+    {#{{ form_start(delete_form) }}#}
+    {#<input type="submit" value="Delete">#}
+    {#{{ form_end(delete_form) }}#}
 {% endblock %}

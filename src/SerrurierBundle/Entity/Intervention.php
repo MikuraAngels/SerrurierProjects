@@ -34,9 +34,10 @@ class Intervention
      * @var Utilisateur
      */
     private $utilisateur;
+    
 
     /**
-     * @return mixed
+     * @return Serrurier $serrurier
      */
     public function getSerrurier()
     {
@@ -44,7 +45,7 @@ class Intervention
     }
 
     /**
-     * @param mixed $serrurier
+     * @param Serrurier $serrurier
      */
     public function setSerrurier($serrurier)
     {
@@ -52,7 +53,7 @@ class Intervention
     }
 
     /**
-     * @return Utilisateur
+     * @return Utilisateur $utilisateur
      */
     public function getUtilisateur()
     {

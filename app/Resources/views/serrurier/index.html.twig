@@ -1,44 +1,37 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Serrurier list</h1>
+    <h1>Liste des Serruriers</h1>
 
-    <table>
+    <div class="panel">
+
+    <table class="table-responsive">
         <thead>
             <tr>
-                <th>Id</th>
                 <th>Nom</th>
                 <th>Prenom</th>
                 <th>Societe</th>
                 <th>Telephone</th>
-                <th>Adresse</th>
-                <th>Ville</th>
-                <th>Codepostal</th>
                 <th>Email</th>
-                <th>Password</th>
-                <th>Actions</th>
+                <th>Adresse</th>
             </tr>
         </thead>
         <tbody>
         {% for serrurier in serruriers %}
             <tr>
-                <td><a href="{{ path('serrurier_show', { 'id': serrurier.id }) }}">{{ serrurier.id }}</a></td>
                 <td>{{ serrurier.nom }}</td>
                 <td>{{ serrurier.prenom }}</td>
                 <td>{{ serrurier.societe }}</td>
                 <td>{{ serrurier.telephone }}</td>
-                <td>{{ serrurier.adresse }}</td>
-                <td>{{ serrurier.ville }}</td>
-                <td>{{ serrurier.codePostal }}</td>
                 <td>{{ serrurier.email }}</td>
-                <td>{{ serrurier.password }}</td>
+                <td>Adresse</td>
                 <td>
                     <ul>
                         <li>
-                            <a href="{{ path('serrurier_show', { 'id': serrurier.id }) }}">show</a>
+                            <a class="btn" href="{{ path('serrurier_show', { 'id': serrurier.id }) }}">En détails</a>
                         </li>
                         <li>
-                            <a href="{{ path('serrurier_edit', { 'id': serrurier.id }) }}">edit</a>
+                            <a class="btn" href="{{ path('serrurier_planning', { 'id': serrurier.id }) }}">Son planning</a>
                         </li>
                     </ul>
                 </td>
@@ -46,10 +39,11 @@
         {% endfor %}
         </tbody>
     </table>
+        <ul>
+            <li>
+                <a class="btn" href="{{ path('serrurier_new') }}">Create a new entry</a>
+            </li>
+        </ul>
+    </div>
 
-    <ul>
-        <li>
-            <a href="{{ path('serrurier_new') }}">Create a new entry</a>
-        </li>
-    </ul>
 {% endblock %}

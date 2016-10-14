@@ -10,12 +10,19 @@
         {% endstylesheets %}
         <link rel="icon" type="image/x-icon" href="{{ asset('serrurier-project/images/favicon-serrurier-project.ico') }}" />
         <link rel="stylesheet" type="text/css" href="{{ asset('serrurier-project/css/style.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('fullcalendar-3.0.1/fullcalendar.css') }}">
+        {#<script src="{{ asset('js/jquery-3.1.1.min.js') }}"></script>#}
+        <script src="{{ asset('fullcalendar-3.0.1/lib/jquery.min.js') }}"></script>
+        <script src="{{ asset('fullcalendar-3.0.1/lib/moment.min.js') }}"></script>
+        <script src="{{ asset('fullcalendar-3.0.1/fullcalendar.min.js') }}"></script>
+        <script src="{{ asset('serrurier-project/js/custom.js') }}"></script>
+
+
     </head>
     <body>
         {% include 'header.html.twig' %}
         {% block body %}{% endblock %}
         {% block javascripts %}
-            <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
             <script>
 
                 $dropdown = $('#dropdown-account');

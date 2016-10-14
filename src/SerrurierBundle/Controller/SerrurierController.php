@@ -55,15 +55,22 @@ class SerrurierController extends Controller
 
     /**
      * Finds and displays a Serrurier entity.
-     *
      */
     public function showAction(Serrurier $serrurier)
     {
-        $deleteForm = $this->createDeleteForm($serrurier);
-
         return $this->render('serrurier/show.html.twig', array(
             'serrurier' => $serrurier,
-            'delete_form' => $deleteForm->createView(),
+        ));
+    }
+
+
+    /**
+     * @param Serrurier $serrurier
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function showPlanningAction(Serrurier $serrurier){
+        return $this->render('serrurier/planning.html.twig', array(
+            'serrurier' => $serrurier,
         ));
     }
 
@@ -72,7 +79,7 @@ class SerrurierController extends Controller
      * @param $city
      * @return array
      */
-    public function showByCityAction($city)
+    /*public function showByCityAction($city)
     {
         $serrurier = $this->getDoctrine()->getRepository('SerrurierBundle:Serrurier')->findOneBy($city);
 
@@ -81,7 +88,7 @@ class SerrurierController extends Controller
         }
 
         return array('serrurier' => $serrurier);
-    }
+    }*/
 
 
     /**

@@ -20,5 +20,10 @@ serrurier_edit:
 
 serrurier_delete:
     path:     /delete/{id}
-    defaults: { _contror: "SerrurierBundle:Serrurier:delete" }
+    defaults: { _controller: "SerrurierBundle:Serrurier:delete" }
     methods:  DELETE
+
+serrurier_planning:
+    path: /planning/{id}
+    defaults: { _controller: "SerrurierBundle:Serrurier:showPlanning" }
+    methods:  GET
