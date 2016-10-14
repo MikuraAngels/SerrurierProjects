@@ -26,6 +26,9 @@ UtilisateurBundle\Entity\Utilisateur:
         codePostal:
             type: string
             length: '5'
+#        imageProfil:
+#            type: string
+#            length: '255'
     oneToMany:
         listeIntervention:
             targetEntity: SerrurierBundle\Entity\Intervention
