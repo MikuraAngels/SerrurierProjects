@@ -26,13 +26,6 @@ UtilisateurBundle\Entity\Utilisateur:
         codePostal:
             type: string
             length: '5'
-        email:
-            type: string
-            length: '255'
-            unique: true
-        password:
-            type: string
-            length: '40'
     oneToMany:
         listeIntervention:
             targetEntity: SerrurierBundle\Entity\Intervention
