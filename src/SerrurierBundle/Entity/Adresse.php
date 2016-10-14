@@ -34,6 +34,26 @@ class Adresse
      */
     private $pays;
 
+    /**
+     * @var Serrurier
+     */
+    private $serrurier;
+
+    /**
+     * @return Serrurier
+     */
+    public function getSerrurier()
+    {
+        return $this->serrurier;
+    }
+
+    /**
+     * @param Serrurier $serrurier
+     */
+    public function setSerrurier($serrurier)
+    {
+        $this->serrurier = $serrurier;
+    }
 
     /**
      * Get id

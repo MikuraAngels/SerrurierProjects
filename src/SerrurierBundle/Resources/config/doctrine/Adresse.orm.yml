@@ -21,5 +21,9 @@ SerrurierBundle\Entity\Adresse:
         pays:
             type: string
             length: '80'
+#   oneToMany:
+#        serrurier:
+#            targetEntity: SerrurierBundle\Entity\Serrurier
+#            inversedBy: adresse
 
     lifecycleCallbacks: {  }

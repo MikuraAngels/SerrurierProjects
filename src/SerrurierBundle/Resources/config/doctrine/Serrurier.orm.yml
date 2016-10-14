@@ -28,13 +28,14 @@ SerrurierBundle\Entity\Serrurier:
              type: string
              length: '250'
 
-    oneToOne:
-        planning:
-            targetEntity: SerrurierBundle\Entity\Planning
-#
-#    oneToMany:
+    oneToMany:
+        listeIntervention:
+            targetEntity: SerrurierBundle\Entity\Intervention
+            mappedBy: serrurier
+
+#    manyToOne:
 #        adresse:
 #            targetEntity: SerrurierBundle\Entity\Adresse
-#            mappedBy: SerrurierBundle\Entity\Serrurier
+#            mappedBy: serrurier
 
     lifecycleCallbacks: {  }

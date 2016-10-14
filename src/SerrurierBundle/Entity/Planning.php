@@ -15,6 +15,11 @@ class Planning
     private $id;
 
     /**
+     * @var Serrurier
+     */
+    private $serrurier;
+    
+    /**
      * @var \DateTime
      */
     private $debutIntervention;
@@ -23,12 +28,26 @@ class Planning
      * @var \DateTime
      */
     private $finIntervention;
+    /**
+     * @return Serrurier
+     */
+    public function getSerrurier()
+    {
+        return $this->serrurier;
+    }
 
+    /**
+     * @param Serrurier $serrurier
+     */
+    public function setSerrurier($serrurier)
+    {
+        $this->serrurier = $serrurier;
+    }
 
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -51,7 +70,7 @@ class Planning
     /**
      * Get debutIntervention
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
     public function getDebutIntervention()
     {
@@ -74,7 +93,7 @@ class Planning
     /**
      * Get finIntervention
      *
-     * @return \DateTime 
+     * @return \DateTime
      */
     public function getFinIntervention()
     {

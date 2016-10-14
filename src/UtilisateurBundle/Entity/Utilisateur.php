@@ -3,17 +3,17 @@
 namespace UtilisateurBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use FOS\UserBundle\Entity\User;
+use SerrurierBundle\Entity\Intervention;
 
 /**
  * Utilisateur
  */
-class Utilisateur extends User
+class Utilisateur
 {
     /**
      * @var int
      */
-    protected $id;
+    private $id;
 
     /**
      * @var string
@@ -45,7 +45,37 @@ class Utilisateur extends User
      */
     private $codePostal;
 
+    /**
+     * @var string
+     */
+    private $email;
 
+    /**
+     * @var string
+     */
+    private $password;
+
+    /**
+     * @var ArrayCollection
+     */
+    private $listeIntervention;
+
+    /**
+     * @return ArrayCollection
+     */
+    public function getListeIntervention()
+    {
+        return $this->listeIntervention;
+    }
+
+    /**
+     * @param ArrayCollection $listeIntervention
+     */
+    public function setListeIntervention($listeIntervention)
+    {
+        $this->listeIntervention = $listeIntervention;
+    }
+    
     /**
      * Get id
      *
@@ -192,5 +222,51 @@ class Utilisateur extends User
     public function getCodePostal()
     {
         return $this->codePostal;
+    }
+
+    /**
+     * Set email
+     *
+     * @param string $email
+     * @return Utilisateur
+     */
+    public function setEmail($email)
+    {
+        $this->email = $email;
+
+        return $this;
+    }
+
+    /**
+     * Get email
+     *
+     * @return string 
+     */
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    /**
+     * Set password
+     *
+     * @param string $password
+     * @return Utilisateur
+     */
+    public function setPassword($password)
+    {
+        $this->password = $password;
+
+        return $this;
+    }
+
+    /**
+     * Get password
+     *
+     * @return string 
+     */
+    public function getPassword()
+    {
+        return $this->password;
     }
 }
