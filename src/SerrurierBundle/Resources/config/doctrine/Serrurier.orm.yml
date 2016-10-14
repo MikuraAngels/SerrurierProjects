@@ -36,6 +36,6 @@ SerrurierBundle\Entity\Serrurier:
 #    manyToOne:
 #        adresse:
 #            targetEntity: SerrurierBundle\Entity\Adresse
-#            mappedBy: serrurier
+#            mappedBy: listeSerrurier
 
     lifecycleCallbacks: {  }

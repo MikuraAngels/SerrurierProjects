@@ -21,8 +21,8 @@ SerrurierBundle\Entity\Adresse:
         pays:
             type: string
             length: '80'
-#   oneToMany:
-#        serrurier:
+#    oneToMany:
+#        listeSerrurier:
 #            targetEntity: SerrurierBundle\Entity\Serrurier
 #            inversedBy: adresse
 

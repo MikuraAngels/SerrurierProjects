@@ -33,6 +33,7 @@ UtilisateurBundle\Entity\Utilisateur:
         password:
             type: string
             length: '40'
+
     oneToMany:
         listeIntervention:
             targetEntity: SerrurierBundle\Entity\Intervention

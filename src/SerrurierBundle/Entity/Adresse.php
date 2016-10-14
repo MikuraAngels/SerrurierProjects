@@ -35,24 +35,24 @@ class Adresse
     private $pays;
 
     /**
-     * @var Serrurier
+     * @var ArrayCollection
      */
-    private $serrurier;
+    private $listeSerrurier;
 
     /**
-     * @return Serrurier
+     * @return ArrayCollection
      */
-    public function getSerrurier()
+    public function getListeSerrurier()
     {
-        return $this->serrurier;
+        return $this->listeSerrurier;
     }
 
     /**
-     * @param Serrurier $serrurier
+     * @param ArrayCollection $listeSerrurier
      */
-    public function setSerrurier($serrurier)
+    public function setListeSerrurier($listeSerrurier)
     {
-        $this->serrurier = $serrurier;
+        $this->listeSerrurier = $listeSerrurier;
     }
 
     /**

@@ -44,7 +44,6 @@ class Serrurier
      */
     private $adresse;
 
-
     /**
      * @var ArrayCollection
      */
@@ -66,7 +65,7 @@ class Serrurier
         $this->listeIntervention = $listeIntervention;
     }
 
-    
+
 
     /**
      * @return string
